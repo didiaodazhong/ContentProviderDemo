@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        delete.setOnClickListener(this);
 //        update.setOnClickListener(this);
 //        find.setOnClickListener(this);
-        contentResolver = getContentResolver();
-
+//        contentResolver = getContentResolver();
 //        ContentResolver contentResolver = getContentResolver();
 
     }
@@ -72,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         person.put("age", cursor.getString(2));
                         persons.add(person);
                     }
+                    cursor.close();
                     PersonAdapter personAdapter = new PersonAdapter(MainActivity.this, persons);
 //                    recyclerview.setAdapter(personAdapter);
                 } else {
